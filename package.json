@@ -1,7 +1,7 @@
 {
-  "name": "testnode",
+  "name": "node-wincc-example",
   "version": "1.0.0",
-  "description": "just my test",
+  "description": "Example project. Node.JS + WinCC",
   "main": "server.js",
   "dependencies": {
     "edge": "^5.0.0",
@@ -16,6 +16,6 @@
   "keywords": [
     "test"
   ],
-  "author": "me",
+  "author": "Ilya Timofeev",
   "license": "MIT"
 }
