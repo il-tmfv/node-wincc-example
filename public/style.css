@@ -1,0 +1,14 @@
+.data {
+    color: black;
+    font-size: 15px;
+    font-family: monospace;
+    height: 20px;
+    width: auto;
+}
+
+#conn-status {
+    font-size: 20px;
+    height: 20px;
+    width: auto;
+    font-family: monospace;
+}
