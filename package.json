@@ -1,6 +1,6 @@
 {
   "name": "node-wincc-example",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Example project. Node.JS + WinCC",
   "main": "server.js",
   "dependencies": {
