@@ -7,7 +7,11 @@
             console.log("Socket:" + socket.id + ":  Registered tag: " + tagName);
             var dataInterval = setInterval(() => { 
                         getTagValue(tagName, (error, result) => {
-                                if (error) throw error;
+                                if (error) {
+                                    socket.emit('wincc-status', { error: true, status: 'Error requesting tag ' + tagName + ' from WinCC: ' + error.toString() });
+                                    return;
+                                }
+                                socket.emit('wincc-status', { error: false, status: 'Connected to WinCC' });
                                 console.log("Socket:" + socket.id + ":  Sending data for tag: " + tagName + " = " + result);
                                 var data = {};
                                 data[tagName] = result; 

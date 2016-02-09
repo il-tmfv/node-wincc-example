@@ -11,6 +11,14 @@ $(document).ready(function() {
         }       
     }); 
 
+    socket.on('wincc-status', function (data) {
+        if (data['error'])
+            $("#wincc-status").css('color', 'red');
+        else
+            $("#wincc-status").css('color', 'black');
+        $("#wincc-status").html(data['status']);
+    });
+    
     socket.on('disconnect', function() {
         $('#conn-status').html("OFFLINE");
         $('#conn-status').css('color', 'red');
